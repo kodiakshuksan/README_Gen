@@ -8,7 +8,7 @@ const fs = require('fs');
 
 
 //User Questions to gather info needed to complete README blank inputs
-const promptUser =
+const promptUser = () =>
     inquirer.prompt([
         {
             type: 'input',
@@ -28,7 +28,7 @@ const promptUser =
         {
             type: 'input',
             name: 'projectLink',
-            message: 'What is url for deployed application?',
+            message: 'What is your url for deployed application?',
         },
         {
             type: 'input',
@@ -44,7 +44,7 @@ const promptUser =
             type: 'checkbox',
             message: 'What technologies were used to complete this project?',
             name: 'technologiesUsed',
-            choices: ['HTML', 'CSS', 'JavaScript', 'JQuery'],
+            choices: ['npm', 'CSS', 'JavaScript', 'JQuery', 'node.js'],
         },
         {
             type: 'input',
@@ -57,14 +57,10 @@ const promptUser =
             message: 'Provide link to a resource used to help in completing this application?',
         },
         {
-            type: 'input',
-            name: 'creditLink3',
-            message: 'Provide link to a resource used to help in completing this application?',
-        },
-        {
-            type: 'input',
-            name: 'licenseName',
-            message: 'What is the name of your applications license?',
+            type: 'checkbox',
+            message: 'What License was used for this project?',
+            name: 'licenseUsed',
+            choices: ['MIT', 'Apache', 'ISC'],
         },
         {
             type: 'input',
@@ -73,22 +69,27 @@ const promptUser =
         },
         {
             type: 'input',
-            name: 'contact1',
-            message: 'What is a good way for people to contact you with questions and or contributions?',
+            name: 'userName',
+            message: 'What is your gitHub user name',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
         },
         {
             type: 'input',
             name: 'test1',
-            message: 'Provide a test if any for your application.',
+            message: 'Provide a test if any for your application',
         },
-    ])
-        .then((data) => {
-            const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+    ]);
+// .then((data) => {
+//     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
 
-            fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-                err ? console.log(err) : console.log('Success!')
-            );
-        });
+//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+//         err ? console.log(err) : console.log('Success!')
+//     ),
+// });
 
 
 
@@ -96,58 +97,77 @@ const promptUser =
 // // TODO: Create a function to write README file
 const generateMarkdown = (answers) =>
     ` #  ${answers.projectName}
-      ## ${answers.name}
-      ## Description-${answers.projectDescription}
+## ${answers.name}
+## Description-
+${answers.projectDescription}
+        
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Technologies Used](#technologies_used)
+4. [Credits](#credits)
+5. [License](#license)
+6. [Badges](#badges)
+7. [Features](#features)
+8. [Questions and Contributions](#questions_and_contributions)
+9. [Tests](#tests)
                 
-      ## Table of Contents
-        1. Installation
-        2. Usage
-        3. Technologies Used
-        4. Credits
-        5. License
-        6. Badges
-        7. Features
-        8. Questions and Contributions
-        9. Tests
-                
-        ##  Installation-
-            ${answers.projectLink}
+##  Installation-
+    ${answers.projectLink}
 
-        ##  Usage- 
-        ${answers.pic1}
-        ${answers.pic2}
+##  Usage- 
+${answers.pic1}
+${answers.pic2}
 
-        ## Technologies Used-
-        ${answers.technologiesUsed}
+## Technologies Used-
+${answers.technologiesUsed}
 
-        ## Credits-  
-        ${answers.credit1}
-        ${answers.credit2}
-        ${answers.credit3}
+## Credits-  
+${answers.creditLink1}
+${answers.creditLink2}
 
-        ## License-
-        ${answers.licenseName} 
+## License-
+${answers.licenseUsed} 
 
-        ## Features-
-        ${answers.feature1}
+## Features-
+${answers.feature1}
 
-        ## Questions and Contributions-  
-        ${answers.contact1}
+## Questions and Contributions-  
+${answers.userName}
+${answers.email}
 
-        ## Tests-  
-        ${answers.test1}`;
+## Tests-  
+${answers.test1}`;
 
 const init = () => {
     promptUser().then((answers) => {
         try {
             const markdown = generateMarkdown(answers);
-            fs.writeFileSync('README.md', markdown);
-            console.log('Successfully wrote to README.md');
+            fs.writeFileSync('mockREADME.md', markdown);
+            console.log('Successfully wrote to mockREADME.md');
         } catch (error) {
             console.log(error);
         }
     });
 };
+
+init();
+
+
+// const init = () => {
+//     promptUser().then((answers) => {
+//       try {
+//         const html = generateHTML(answers);
+//         fs.writeFileSync('index.html', html);
+//         console.log('Successfully wrote to index.html');
+//       } catch (error) {
+//         console.log(error);
+//       }
+//     });
+//   };
+
+//   init();
+
 
 
 // 

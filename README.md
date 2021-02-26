@@ -33,7 +33,7 @@ JavaScript,  node.js,  npm file-system,  npm inquirer
 [GitHub](https://guides.github.com/features/mastering-markdown)
 
 ## License-
-### MIT [MIT License](license.txt)
+### [MIT License](license.txt)
 
 ## Features-
 Quickly creates a README with the user's input

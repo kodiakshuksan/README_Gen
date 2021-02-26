@@ -32,8 +32,18 @@ const promptUser = () =>
         },
         {
             type: 'input',
+            name: 'picText1',
+            message: 'Describe first screenshot for user',
+        },
+        {
+            type: 'input',
             name: 'pic1',
             message: 'What is file path for first screenshot?',
+        },
+        {
+            type: 'input',
+            name: 'picText2',
+            message: 'Describe second screenshot for user',
         },
         {
             type: 'input',
@@ -48,8 +58,18 @@ const promptUser = () =>
         },
         {
             type: 'input',
+            name: 'creditText1',
+            message: 'Describe your first resource',
+        },
+        {
+            type: 'input',
             name: 'creditLink1',
             message: 'Provide link to a resource used to help in completing this application?',
+        },
+        {
+            type: 'input',
+            name: 'creditText2',
+            message: 'Describe your second resource',
         },
         {
             type: 'input',
@@ -60,8 +80,9 @@ const promptUser = () =>
             type: 'checkbox',
             message: 'What License was used for this project?',
             name: 'licenseUsed',
-            choices: ['MIT', 'Apache', 'ISC'],
+            choices: ['[MIT License](license.txt)', '[Apache License](https://opensource.org/licenses/Apache-2.0)', '[ISC License](https://opensource.org/licenses/ISC)',],
         },
+
         {
             type: 'input',
             name: 'feature1',
@@ -96,48 +117,53 @@ const promptUser = () =>
 
 // // TODO: Create a function to write README file
 const generateMarkdown = (answers) =>
-    ` #  ${answers.projectName}
+    ` #  ${answers.projectName} 
+
 ## ${answers.name}
+
 ## Description-
 ${answers.projectDescription}
-        
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]   
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Technologies Used](#technologies_used)
 4. [Credits](#credits)
 5. [License](#license)
-6. [Badges](#badges)
-7. [Features](#features)
-8. [Questions and Contributions](#questions_and_contributions)
-9. [Tests](#tests)
-                
+6. [Features](#features)
+7. [Questions and Contributions](#questions_and_contributions)
+8. [Tests](#tests)
+        
 ##  Installation-
-    ${answers.projectLink}
 
+[Video Demonstration of Application](${answers.projectLink})
+    
 ##  Usage- 
-${answers.pic1}
-${answers.pic2}
+
+![${answers.picText1}](${answers.pic1})
+![${answers.picText2}](${answers.pic2})
+
 
 ## Technologies Used-
 ${answers.technologiesUsed}
 
 ## Credits-  
-${answers.creditLink1}
-${answers.creditLink2}
+[${answers.creditText1}](${answers.creditLink1})
+[${answers.creditText2}](${answers.creditLink2})
 
 ## License-
-${answers.licenseUsed} 
+### ${answers.licenseUsed}
 
 ## Features-
 ${answers.feature1}
 
 ## Questions and Contributions-  
-${answers.userName}
-${answers.email}
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+### GitHub Profile: https://github.com/${answers.userName}
+### Email: ${answers.email}
 
 ## Tests-  
-${answers.test1}`;
+${answers.test1} `;
 
 const init = () => {
     promptUser().then((answers) => {

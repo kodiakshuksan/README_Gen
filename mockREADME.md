@@ -1,42 +1,47 @@
-#  README_Gen
-## Jennifer Detmering
-## Description-Makes a README FILE with user's input
-        
+ #  README GEN 
+
+## Jenny
+
+## Description-
+Makes a README file
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]   
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Technologies Used](#technologies_used)
 4. [Credits](#credits)
 5. [License](#license)
-6. [Badges](#badges)
-7. [Features](#features)
-8. [Questions and Contributions](#questions_and_contributions)
-9. [Tests](#tests)
-                
+6. [Features](#features)
+7. [Questions and Contributions](#questions_and_contributions)
+8. [Tests](#tests)
+        
 ##  Installation-
-    video link
 
+[Video Demonstration of Application](recording video now)
+    
 ##  Usage- 
-assets/pic1.PNG
+
+![prompts](assets/pic1.PNG)
+![new README](assets/pic2.PNG)
 
 
 ## Technologies Used-
-HTML,CSS,JavaScript
+npm
 
 ## Credits-  
-undefined
-undefined
-undefined
+[w3schools](https://www.w3schools.com/)
+[]()
 
 ## License-
-MIT 
+### [MIT License](license.txt)
 
 ## Features-
-Quickly makes a README file
+makes a README File
 
 ## Questions and Contributions-  
-https://github.com/kodiakshuksan
-kodiakshuksan@yahoo.com
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+### GitHub Profile: https://github.com/kodiakshuksan
+### Email: kodiakshuksan@yahoo.com
 
 ## Tests-  
-none
+none 

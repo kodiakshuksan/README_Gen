@@ -16,7 +16,7 @@ An application that uses node.js and npm inquirer to prompt user for information
         
 ##  Installation-
 
-[Video Link](https:)
+[Video Link](https://drive.google.com/file/d/1pGrHEoWhTPrQ61WoiGD5rEMtZ7Woc4YE/view)
   
 
 ##  Usage- 

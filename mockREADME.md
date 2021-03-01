@@ -1,10 +1,9 @@
- #  README GEN 
-
-## Jenny
+# dfj 
+## dfdjf
 
 ## Description-
-Makes a README file
-## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]   
+### adfj
+#### [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] 
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
@@ -17,31 +16,32 @@ Makes a README file
         
 ##  Installation-
 
-[Video Demonstration of Application](recording video now)
+[Video Demonstration of Application](adfjj')
     
 ##  Usage- 
 
-![prompts](assets/pic1.PNG)
-![new README](assets/pic2.PNG)
+![adfkjl](adfjkdfj)
+![adfjfff](ff)
 
 
 ## Technologies Used-
-npm
+
 
 ## Credits-  
-[w3schools](https://www.w3schools.com/)
-[]()
+[dfd](afdfjd)
+[fdfj](fjdkfj)
 
 ## License-
-### [MIT License](license.txt)
+
+###[![License: MIT]](https://opensource.org/licenses/MIT) 
 
 ## Features-
-makes a README File
+dfk
 
 ## Questions and Contributions-  
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
-### GitHub Profile: https://github.com/kodiakshuksan
-### Email: kodiakshuksan@yahoo.com
+### GitHub Profile: https://github.com/jfkdj
+### Email: fjdkj
 
-## Tests-  
-none 
+## Tests- 
+kdfjk
